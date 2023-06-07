@@ -33,12 +33,14 @@ function Search({ searchList }) {
           id="search"
           value={query}
           onChange={handleOnSearch}
-          className="block w-26 pl-10 text-sm 
-                                h-8
+          className="block w-21px text-sm 
+                                h-6
                                 text-gray-900 
                                border border-gray-300
-                               rounded-lg bg-gray-50
-
+                               bg-gray-50
+                                mt-2
+                                px-2
+                                rounded-sm
                                focus:outline-none
                                focus:ring-blue-500
                                focus:border-blue-500"
@@ -58,7 +60,7 @@ function Search({ searchList }) {
           {posts &&
             posts.map((post) => (
               <li className="py-2 p-2">
-                <a className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2" href={`/aktiviti/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
+                - <a className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2" href={`/aktiviti/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
                 {/* <p className="text-sm text-gray-800">{post.frontmatter.description}</p> */}
               </li>
             ))}

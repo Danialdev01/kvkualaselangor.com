@@ -2,162 +2,122 @@
 import HeaderLink from './HeaderLink.astro';
 import SearchBar from './SearchBar.astro';
 ---
+
 <header>
-	<div class="top-nav hide-for-mobile">
-		<div class="social h-8 flex">
-			<div class="thing" style="width:100%"> </div>
-			<p class="flex text-left" style="width:fit-content">
+	<div class="top-nav hidden md:block">
+		<div class="social-icon flex p-2">
+			<div class="w-full"></div>
+			<p class="flex pr-20">
+				<a href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="/icons/youtube.png" alt="youtube"></a>
 				<a href="https://www.facebook.com/kvks.sel/"><img src="/icons/facebook.png" alt="facebook"></a>
 				<a href="https://www.instagram.com/kvkualaselangor_official/"><img src="/icons/instagram.png" alt="instagram"></a>
-				<a href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="/icons/youtube.png" alt="youtube"></a>
-				<a href="https://www.google.com/search?client=firefox-b-d&q=googlemaps+kvkualaselangor#"><img src="/icons/googlemaps.png" alt="googlemaps"></a>
+				<a href="https://www.google.com/search?q=google+maps+kv+kuala+selangor&oq=google+maps+&aqs=chrome.1.69i57j35i39j0i131i433i512l3j0i512l2j0i131i433i512j0i512l2.4128j0j7&sourceid=chrome&ie=UTF-8#"><img src="/icons/googlemaps.png" alt="googlemaps"></a>
 			</p>
 		</div>
 		<hr>
-		<div class="logo pt-3">
-			<a class="navbar-brand" href="#"><img src="/placeholder-social.png" alt="logo" width="130px"></a>
+		<div class="logo pl-5 p-3">
+			<img style="width:150px" src="/placeholder-social.png" alt="logo">
 		</div>
 	</div>
-	<nav id="nav" class="navbar navbar-expand-lg">
-		<div class="container-fluid" style="background-color: #1F2532;padding:5px;padding-top:5px;margin-top:-10px;height:40px">
-	
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-	
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-	
-				<div class="offcanvas-body">
-					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
-	
-						<li class="nav-item md:text-black">
-							<HeaderLink href="/">UTAMA</HeaderLink>
+	<div class="mobMenu px-5 pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px">
+		<div class="md:hidden w-full">
+			<center>
+				<img style="width:150px" src="/inverted-logo.png" alt="logo">
+			</center>
+		</div>
+		<div class="menu-open"><span class="open"></span></div>
+	</div>
+	<div class="mmenu mt-4">
+		<div class="menu-close"><span class="close"></span></div>
+
+		<ul class="mmenu-nav px-10" style="background-color:#1F2532">
+			<img class="md:hidden" style="width:150px" src="/inverted-logo.png" alt="logo">
+			<br>
+			<li class="item"><HeaderLink href="/">Utama</HeaderLink></li>
+
+			<!-- Service -->
+			<li class="item dropdownitem">
+				<a href="#" class="nav-dropdown">Info Koperat</a>
+				<div class="dropdown">
+					<ul>
+						<li class="item"><a href="#">Software</a></li>
+						<li class="item"><a href="#">Server Maintenance</a></li>
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Web Hosting</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="#">Linux Hosting</a></li>
+									<li class="item"><a href="#">Windows Hosting</a></li>
+								</ul>
+							</div>
 						</li>
-						<li class="nav-item">
-							<HeaderLink href="/info">INFO</HeaderLink>
-						</li>
-						<li class="nav-item">
-							<HeaderLink href="/kursus">KURSUS YANG DITAWARKAN</HeaderLink>
-						</li>
-						<li class="nav-item">
-							<HeaderLink href="/kemudahan">KEMUDAHAN</HeaderLink>
-						</li>
-						<li class="nav-item">
-							<HeaderLink href="/hep">HEP</HeaderLink>
-						</li>
-						<li class="nav-item">
-							<HeaderLink href="/aktiviti">AKTIVITI</HeaderLink>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								E-Rujukkan
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li class="nav-item dropend">
-									<a class="nav-link dropdown-toggle sub-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										E-Rujukkan sub
-									</a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<SearchBar></SearchBar>
-						</li>
-						<!-- <li class="nav-item dropdown">
-							<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-							</ul>
-						</li> -->
+						<li class="item"><a href="#">Graphic Design</a></li>
 					</ul>
 				</div>
-			</div>
-		</div>
-	</nav>
-</header>
+			</li>
 
+			<li class="item dropdownitem">
+				<a href="#" class="nav-dropdown">Permohonan</a>
+				<div class="dropdown">
+					<ul>
+						<li class="item"><a href="#">Corporate Web Design</a></li>
+
+						<li class="item dropdownitem">
+						<a href="#" class="nav-dropdown">E-Commerce</a>
+						<div class="dropdown">
+							<ul>
+								<li class="item"><a href="#">Ready E-Commerce</a></li>
+								<li class="item"><a href="#">Custom E-Commerce</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="item dropdownitem">
+						<a href="#" class="nav-dropdown">Personal Web Design</a>
+						<div class="dropdown">
+							<ul>
+								<li class="item"><a href="#">Blog Site</a></li>
+								<li class="item"><a href="#">Portfolio Site</a></li>
+								<li class="item"><a href="#">Custom Personal Site</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="item"><a href="#">Custom Web Design</a></li>
+						<li class="item"><a href="#">Onepage Web Design</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item dropdownitem">
+				<a href="#" class="nav-dropdown">Akademik</a>
+				<div class="dropdown">
+					<ul>
+						<li class="item"><a href="#">Mail Settings</a></li>
+						<li class="item"><a href="#">Hosting Selection</a></li>
+						<li class="item"><a href="#">Admin Panel</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item dropdownitem">
+				<a href="#" class="nav-dropdown">Kemudahan Lain</a>
+				<div class="dropdown">
+					<ul>
+						<li class="item"><a href="#">Mail Settings</a></li>
+						<li class="item"><a href="#">Hosting Selection</a></li>
+						<li class="item"><a href="#">Admin Panel</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item"><a href="#">HEP</a></li>
+			<li class="item"><a href="/aktiviti">Aktiviti</a></li>
+			<li class="item">
+				<SearchBar></SearchBar>
+			</li>
+		</ul>
+	</div>
+</header>
+<br>
 
 <style>
-	.dropdown {
-		color:#ffffff;
-		font-weight:600;
-		font-size: 0.9rem;
-		display: inline-block;
-		margin-top: -1px;
-		text-decoration: none;
-	}
-	.sub-dropdown{
-		color: black
-	}
-	/* default color */
-	.dropdown:hover, dropdown:active, dropdown:focus, dropdown:checked{
-		color:white
-	}
-	.navbar-nav .nav-link.show{
-		color:inherit;
-	}
-	/* untuk hover dropdown */
-	.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
-		display: block;
-		margin-top: .125em;
-		margin-left: .125em;
-	}
-	/* untuk pastikan dropdown boleh bukak kalau hover sahaja */
-	.dropdown .dropdown-menu{
-		/* display: none; */
-	}
-	@media screen and (min-width:769px){
-		.dropend:hover > .dropdown-menu{
-			position: absolute;
-			top:0;
-			left:100%;
-		}
-	}
-
-
-	.logo{
-		padding-bottom:10px;
-		padding-left: 4%;
-	}
-	.social{
-		text-align: right;
-		padding: 5px;
-		height:20px;
-		padding-right:10%;
-	}
-	.social p a img{
-		width: 21px;
-		opacity: 0.9;
-		margin-right: 20px;
-	}
-	/* Stiky nav */
-	.scroll-down header nav{
-		transform: translate3d(0, -100%, 0);
-	}
-
-	.sroll-up header nav{
-		background-color: red;
-		transform: translate3d(0, 100%, 0);
-	}
-	nav{
-		margin-top: -10px;
-		background-color: transparent;
-		padding:10px;
-		padding-top: 20px !important;
-	}
+	@import "../styles/header.css";
 </style>
 
+<script src="../assets/js/header.js"></script>
