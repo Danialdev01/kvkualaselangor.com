@@ -1,0 +1,42 @@
+---
+const today = new Date();
+---
+
+<footer>
+	&copy; {today.getFullYear()} Kolej Vokasional Kuala Selangor All rights reserved.
+</footer>
+<style>
+	footer {
+		padding: 25px;
+		text-align: center;
+	}
+</style>
+
+
+<!-- SCRIPTS  -->
+<script src="../assets/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+	// // nav scroll stiky
+	const body = document.body;
+	const nav = document.getElementById("nav");
+	let lastScroll = 0 ;
+
+	window.addEventListener('scroll', () => {
+		const currentScroll = window.pageYOffset;
+
+		if (currentScroll <= 0){
+			body.classList.remove("scroll-up")
+		}
+
+		if (currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+			body.classList.remove("scroll-up")
+			body.classList.add("scroll-down")
+		}
+		if (currentScroll < lastScroll && body.classList.contains("scroll-down")){
+			body.classList.remove("scroll-down")
+			body.classList.add("scroll-up")
+		}
+
+		lastScroll = currentScroll;
+	})
+</script>

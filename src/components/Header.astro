@@ -1,0 +1,163 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import SearchBar from './SearchBar.astro';
+---
+<header>
+	<div class="top-nav hide-for-mobile">
+		<div class="social h-8 flex">
+			<div class="thing" style="width:100%"> </div>
+			<p class="flex text-left" style="width:fit-content">
+				<a href="https://www.facebook.com/kvks.sel/"><img src="/icons/facebook.png" alt="facebook"></a>
+				<a href="https://www.instagram.com/kvkualaselangor_official/"><img src="/icons/instagram.png" alt="instagram"></a>
+				<a href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="/icons/youtube.png" alt="youtube"></a>
+				<a href="https://www.google.com/search?client=firefox-b-d&q=googlemaps+kvkualaselangor#"><img src="/icons/googlemaps.png" alt="googlemaps"></a>
+			</p>
+		</div>
+		<hr>
+		<div class="logo pt-3">
+			<a class="navbar-brand" href="#"><img src="/placeholder-social.png" alt="logo" width="130px"></a>
+		</div>
+	</div>
+	<nav id="nav" class="navbar navbar-expand-lg">
+		<div class="container-fluid" style="background-color: #1F2532;padding:5px;padding-top:5px;margin-top:-10px;height:40px">
+	
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+	
+				<div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+	
+						<li class="nav-item md:text-black">
+							<HeaderLink href="/">UTAMA</HeaderLink>
+						</li>
+						<li class="nav-item">
+							<HeaderLink href="/info">INFO</HeaderLink>
+						</li>
+						<li class="nav-item">
+							<HeaderLink href="/kursus">KURSUS YANG DITAWARKAN</HeaderLink>
+						</li>
+						<li class="nav-item">
+							<HeaderLink href="/kemudahan">KEMUDAHAN</HeaderLink>
+						</li>
+						<li class="nav-item">
+							<HeaderLink href="/hep">HEP</HeaderLink>
+						</li>
+						<li class="nav-item">
+							<HeaderLink href="/aktiviti">AKTIVITI</HeaderLink>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								E-Rujukkan
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li class="nav-item dropend">
+									<a class="nav-link dropdown-toggle sub-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										E-Rujukkan sub
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<SearchBar></SearchBar>
+						</li>
+						<!-- <li class="nav-item dropdown">
+							<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+<style>
+	.dropdown {
+		color:#ffffff;
+		font-weight:600;
+		font-size: 0.9rem;
+		display: inline-block;
+		margin-top: -1px;
+		text-decoration: none;
+	}
+	.sub-dropdown{
+		color: black
+	}
+	/* default color */
+	.dropdown:hover, dropdown:active, dropdown:focus, dropdown:checked{
+		color:white
+	}
+	.navbar-nav .nav-link.show{
+		color:inherit;
+	}
+	/* untuk hover dropdown */
+	.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+		display: block;
+		margin-top: .125em;
+		margin-left: .125em;
+	}
+	/* untuk pastikan dropdown boleh bukak kalau hover sahaja */
+	.dropdown .dropdown-menu{
+		/* display: none; */
+	}
+	@media screen and (min-width:769px){
+		.dropend:hover > .dropdown-menu{
+			position: absolute;
+			top:0;
+			left:100%;
+		}
+	}
+
+
+	.logo{
+		padding-bottom:10px;
+		padding-left: 4%;
+	}
+	.social{
+		text-align: right;
+		padding: 5px;
+		height:20px;
+		padding-right:10%;
+	}
+	.social p a img{
+		width: 21px;
+		opacity: 0.9;
+		margin-right: 20px;
+	}
+	/* Stiky nav */
+	.scroll-down header nav{
+		transform: translate3d(0, -100%, 0);
+	}
+
+	.sroll-up header nav{
+		background-color: red;
+		transform: translate3d(0, 100%, 0);
+	}
+	nav{
+		margin-top: -10px;
+		background-color: transparent;
+		padding:10px;
+		padding-top: 20px !important;
+	}
+</style>
+

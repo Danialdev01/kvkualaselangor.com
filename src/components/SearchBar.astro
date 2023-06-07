@@ -1,0 +1,11 @@
+---
+import Search from './Search';
+const allPosts = await Astro.glob('../content/aktiviti/*.{md,mdx}');
+const posts = allPosts.filter(post => (!post.frontmatter.draft && post.frontmatter.slug));
+---
+<Search client:load searchList={posts}></Search>
+<style>
+    .flex{
+        display:flex;
+    }
+</style>
