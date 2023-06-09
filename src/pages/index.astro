@@ -1,14 +1,18 @@
 ---
 
 import BasicLayout from '../layouts/BasicLayout.astro';
+import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
 
 <BasicLayout title="Kolej Vokasional Kuala Selangor" description={SITE_DESCRIPTION}>
 	<main>
 		<center>
-			something
+			
+			<!-- {allPosts.map((post) => <Card {post} />)} -->
+			<!-- <Card post={allPosts[0]} /> -->
 			
 		</center>
 	</main>

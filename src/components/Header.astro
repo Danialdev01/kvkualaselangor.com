@@ -5,9 +5,11 @@ import SearchBar from './SearchBar.astro';
 
 <header>
 	<div class="top-nav hidden md:block">
-		<div class="social-icon flex p-2">
+		<div class="social-icon flex p-1 h-7">
 			<div class="w-full"></div>
 			<p class="flex pr-20">
+
+				<!-- top social icon -->
 				<a href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="/icons/youtube.png" alt="youtube"></a>
 				<a href="https://www.facebook.com/kvks.sel/"><img src="/icons/facebook.png" alt="facebook"></a>
 				<a href="https://www.instagram.com/kvkualaselangor_official/"><img src="/icons/instagram.png" alt="instagram"></a>
@@ -15,11 +17,16 @@ import SearchBar from './SearchBar.astro';
 			</p>
 		</div>
 		<hr>
+		<!-- top logo icon -->
 		<div class="logo pl-5 p-3">
 			<img style="width:150px" src="/placeholder-social.png" alt="logo">
 		</div>
 	</div>
-	<div class="mobMenu px-5 pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px">
+
+	<!-- navbar start -->
+	<!-- logo for mobile -->
+	<div class="mobMenu px-5% pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px">
+
 		<div class="md:hidden w-full">
 			<center>
 				<img style="width:150px" src="/inverted-logo.png" alt="logo">
@@ -27,22 +34,33 @@ import SearchBar from './SearchBar.astro';
 		</div>
 		<div class="menu-open"><span class="open"></span></div>
 	</div>
+
+
+	<!-- navbar desk -->
 	<div class="mmenu mt-4">
+		<!-- close ofcanvas icon -->
 		<div class="menu-close"><span class="close"></span></div>
 
 		<ul class="mmenu-nav px-10" style="background-color:#1F2532">
+			<!-- offcanvas logo -->
 			<img class="md:hidden" style="width:150px" src="/inverted-logo.png" alt="logo">
 			<br>
+
+			<!-- utama -->
 			<li class="item"><HeaderLink href="/">Utama</HeaderLink></li>
 
-			<!-- Service -->
+			<!-- info koperat -->
 			<li class="item dropdownitem">
 				<a href="#" class="nav-dropdown">Info Koperat</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="#">Software</a></li>
-						<li class="item"><a href="#">Server Maintenance</a></li>
-						<li class="item dropdownitem">
+						<li class="item"><HeaderLink href="/info/pengenalan">Pengenalan</HeaderLink></li>
+						<li class="item"><HeaderLink href="/info/sejarah">Sejarah</HeaderLink></li>
+						<li class="item"><HeaderLink href="/info/carta">Carta Organisasi</HeaderLink></li>
+						<li class="item"><HeaderLink href="/info/objektif">DASAR , OBJEKTIF , MATLAMAT DAN FALSAFAH</HeaderLink></li>
+
+						<!--^ contoh kalau nak tambah sub menu -->
+						<!-- <li class="item dropdownitem">
 							<a href="#" class="nav-dropdown">Web Hosting</a>
 							<div class="dropdown">
 								<ul>
@@ -50,64 +68,58 @@ import SearchBar from './SearchBar.astro';
 									<li class="item"><a href="#">Windows Hosting</a></li>
 								</ul>
 							</div>
-						</li>
-						<li class="item"><a href="#">Graphic Design</a></li>
+						</li> -->
 					</ul>
 				</div>
 			</li>
 
+			<!-- permohonan -->
 			<li class="item dropdownitem">
 				<a href="#" class="nav-dropdown">Permohonan</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="#">Corporate Web Design</a></li>
-
-						<li class="item dropdownitem">
-						<a href="#" class="nav-dropdown">E-Commerce</a>
-						<div class="dropdown">
-							<ul>
-								<li class="item"><a href="#">Ready E-Commerce</a></li>
-								<li class="item"><a href="#">Custom E-Commerce</a></li>
-							</ul>
-						</div>
-						</li>
-						<li class="item dropdownitem">
-						<a href="#" class="nav-dropdown">Personal Web Design</a>
-						<div class="dropdown">
-							<ul>
-								<li class="item"><a href="#">Blog Site</a></li>
-								<li class="item"><a href="#">Portfolio Site</a></li>
-								<li class="item"><a href="#">Custom Personal Site</a></li>
-							</ul>
-						</div>
-						</li>
-						<li class="item"><a href="#">Custom Web Design</a></li>
-						<li class="item"><a href="#">Onepage Web Design</a></li>
+						<li class="item"><a href="https://sptv.moe.gov.my/">SVM</a></li>
+						<li class="item"><a href="https://semakdvm.kvkualaselangor.com/">DVM</a></li>
+						<li class="item"><a href="#">SLDN</a></li>
 					</ul>
 				</div>
 			</li>
+
+			<!-- akademik -->
 			<li class="item dropdownitem">
 				<a href="#" class="nav-dropdown">Akademik</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="#">Mail Settings</a></li>
-						<li class="item"><a href="#">Hosting Selection</a></li>
-						<li class="item"><a href="#">Admin Panel</a></li>
+						<li class="item"><a href="#">Pemasaran</a></li>
+						<li class="item"><a href="#">Perakaunan</a></li>
+						<li class="item"><a href="#">Teknologi Animasi 3D</a></li>
+						<li class="item"><a href="#">Teknologi Sistem Pengurusan Pangkalan Data dan Aplikas Web</a></li>
+						<li class="item"><a href="#">Bakeri Dan Pastri</a></li>
+						<li class="item"><a href="#">Seni Kulinari</a></li>
+						<li class="item"><a href="#">SLDN Perabot</a></li>
 					</ul>
 				</div>
 			</li>
+
+			<!-- kemudahan lain -->
 			<li class="item dropdownitem">
 				<a href="#" class="nav-dropdown">Kemudahan Lain</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="#">Mail Settings</a></li>
-						<li class="item"><a href="#">Hosting Selection</a></li>
-						<li class="item"><a href="#">Admin Panel</a></li>
+						<li class="item"><a href="https://www.e-parcelkvks.com/">E-parcel</a></li>
+						<li class="item"><a href="https://sites.google.com/view/mppkvkualaselangor/">MPP KVKS</a></li>
+						<li class="item"><a href="https://ekokedikvks.com/">EKOKEDI</a></li>
 					</ul>
 				</div>
 			</li>
-			<li class="item"><a href="#">HEP</a></li>
+
+			<!-- hep  -->
+			<li class="item"><a href="https://hep.kvkualaselangor.com">HEP</a></li>
+
+			<!-- aktiviti -->
 			<li class="item"><a href="/aktiviti">Aktiviti</a></li>
+
+			<!-- search bar -->
 			<li class="item">
 				<SearchBar></SearchBar>
 			</li>

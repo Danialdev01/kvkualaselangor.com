@@ -5,6 +5,7 @@
  */
 
 @import "./header.css";
+@import "./footer.css";
 body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
@@ -26,6 +27,14 @@ h6,
 strong,
 b {
 	color: #222;
+}
+h1{
+	font-size:1.5rem  !important;
+	font-weight: bold !important;
+}
+h2{
+	font-size: 1.2rem !important;
+	font-weight: bold !important;
 }
 a {
 	color: #3273dc;
@@ -84,4 +93,14 @@ blockquote {
 #heroPost{
 	height: 50vh;
 	/* aspect-ratio: 16 /9; */
+}
+main{
+	min-height: 60vh;
+}
+.main-container{
+	padding: 2%;
+}
+hr{
+	color: black solid !important;
+	height: 2px !important;
 }

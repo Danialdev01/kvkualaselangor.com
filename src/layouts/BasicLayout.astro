@@ -20,7 +20,9 @@ const { title, description } = Astro.props;
 	</head>
 	<body>
 		<Header title={title} />
-		<slot />
+		<div class="main-container">
+			<slot />
+		</div>
 		<Footer />
 	</body>
 </html>
