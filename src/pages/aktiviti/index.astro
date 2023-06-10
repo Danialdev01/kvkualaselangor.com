@@ -41,11 +41,12 @@ const posts = (await getCollection('aktiviti')).sort(
 				<ul style="padding:5%">
 					<!-- display semua content -->
 					<!-- TODO jadikan content card -->
+					<!-- TODO sort by new post -->
 					{
 						posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<a href={`/aktiviti/${post.slug}/`}>{post.data.title}</a>
+								<a href={`/aktiviti/${post.data.title}/`}>{post.data.title}</a>
 							</li>
 						))
 					}
