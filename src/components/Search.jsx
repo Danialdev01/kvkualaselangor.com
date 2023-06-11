@@ -53,7 +53,7 @@ function Search({ searchList }) {
           {posts &&
             posts.map((post) => (
               <li className="py-2 p-2 flex">
-                <a className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2" href={`/aktiviti/${post.frontmatter.title}`}>{post.frontmatter.title}</a>
+                <a className="text-lg text-blue-700 hover:text-blue-900 hover:underline underline-offset-2" href={`/aktiviti/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
                 {/* <p className="text-sm text-gray-800">{post.frontmatter.description}</p> */}
               </li>
             ))}

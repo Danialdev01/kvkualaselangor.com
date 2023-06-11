@@ -38,19 +38,22 @@ const posts = (await getCollection('aktiviti')).sort(
 		<Header />
 		<main>
 			<section>
-				<ul style="padding:5%">
-					<!-- display semua content -->
-					<!-- TODO jadikan content card -->
-					<!-- TODO sort by new post -->
-					{
-						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/aktiviti/${post.data.title}/`}>{post.data.title}</a>
-							</li>
-						))
-					}
-				</ul>
+				<article>
+					<div class="links-container px-5">
+						<div class="links" style="display:flex;flex-direction:column-reverse">
+							<!-- display semua content -->
+							<!-- TODO jadikan content card -->
+							{
+								posts.map((post) => (
+									<div class="links">
+										<FormattedDate date={post.data.pubDate} />
+										<a class="pl-3" href={`/aktiviti/${post.slug}/`}>{post.data.title}</a>
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</article>
 			</section>
 		</main>
 		<Footer />
