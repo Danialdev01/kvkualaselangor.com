@@ -11,7 +11,7 @@ npm run dev
 ```
 build
 ```
-npm run buuld
+npm run build
 ```
 preview
 ```
