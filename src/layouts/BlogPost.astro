@@ -33,6 +33,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<center>
+					<!-- TODO fix aspect ratio image on small screen -->
 					{heroImage && <img id="heroPost" src={heroImage} alt="" />}
 				</center>
 				<br>

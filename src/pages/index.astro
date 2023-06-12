@@ -3,18 +3,20 @@
 import BasicLayout from '../layouts/BasicLayout.astro';
 import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Carousel from '../components/pages/Carousel.astro';
 const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
 
 <BasicLayout title="Kolej Vokasional Kuala Selangor" description={SITE_DESCRIPTION}>
 	<main>
-		<center>
-			
-			<!-- TODO cascading news layout -->
-			
-			
-		</center>
+		<br>
+		<div class="carousel-container w-full" style="height:100vh">
+			<div class="carousel">
+				<!-- carousel image slider -->
+				<Carousel />
+			</div>
+		</div>
 	</main>
 </BasicLayout>
 

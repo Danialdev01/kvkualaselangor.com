@@ -190,6 +190,9 @@
     display: none;
 }
 @media screen and (max-width: 760px) {
+    #carousel{
+        margin-top: -30vh;
+    }
     .menu-open,
     .menu-close {
         cursor: pointer;
