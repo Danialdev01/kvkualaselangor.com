@@ -25,12 +25,16 @@ import SearchBar from './SearchBar.astro';
 
 	<!-- navbar start -->
 	<!-- logo for mobile -->
-	<div class="mobMenu pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px;padding-right:5%;padding-left:5%">
+	<div class="mobMenu pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:60px;padding-top:5px;padding-right:5%;padding-left:5%">
 
 		<div class="md:hidden w-full">
-			<img style="width:150px" src="/inverted-logo.png" alt="logo">
+			<div class="logo-container p-1 bg-white" style="width: fit-content;border-radius: 4px;">
+				<img style="width:150px" src="/placeholder-social.png" alt="logo">
+			</div>
 		</div>
-		<div class="menu-open"><span class="open"></span></div>
+		<div class="menu-open">
+			<img class="w-10" src="/icons/ham-icon.png" alt="ham-icon">
+		</div>
 	</div>
 
 
@@ -42,7 +46,9 @@ import SearchBar from './SearchBar.astro';
 
 		<ul class="mmenu-nav px-10" style="background-color:#1F2532;">
 			<!-- offcanvas logo -->
-			<img class="md:hidden" style="width:150px" src="/inverted-logo.png" alt="logo">
+			<div class="offcanvas-logo" style="background-color:white;width:100%;padding:10px;border-radius: 4px;">
+				<img class="md:hidden" style="width:150px" src="/placeholder-social.png" alt="logo">
+			</div>
 			<br>
 
 			<!-- utama -->
@@ -79,6 +85,7 @@ import SearchBar from './SearchBar.astro';
 					<ul>
 						<li class="item"><a href="https://sptv.moe.gov.my/">SVM</a></li>
 						<li class="item"><a href="https://semakdvm.kvkualaselangor.com/">DVM</a></li>
+						<!-- TODO add SLDN link -->
 						<li class="item"><a href="#">SLDN</a></li>
 					</ul>
 				</div>
@@ -94,7 +101,9 @@ import SearchBar from './SearchBar.astro';
 							<a href="#" class="nav-dropdown">Jabatan Perniagaan</a>
 							<div class="dropdown">
 								<ul>
+									<!-- TODO add Perakaunan link -->
 									<li class="item"><a href="#">Perakaunan</a></li>
+									<!-- TODO add Pemasaran link -->
 									<li class="item"><a href="#">Pemasaran</a></li>
 								</ul>
 							</div>
@@ -103,6 +112,7 @@ import SearchBar from './SearchBar.astro';
 							<a href="#" class="nav-dropdown">Jabatan Seni Reka</a>
 							<div class="dropdown">
 								<ul>
+									<!-- TODO add animasi link -->
 									<li class="item"><a href="#">Teknologi Animasi 3D</a></li>
 								</ul>
 							</div>
@@ -111,6 +121,7 @@ import SearchBar from './SearchBar.astro';
 							<a href="#" class="nav-dropdown">Jabatan ICT</a>
 							<div class="dropdown">
 								<ul>
+									<!-- TODO add KPD link -->
 									<li class="item"><a href="#">Teknologi Sistem Pengurusan Pangkalan Data dan Aplikas Web</a></li>
 								</ul>
 							</div>
@@ -119,11 +130,14 @@ import SearchBar from './SearchBar.astro';
 							<a href="#" class="nav-dropdown">Jabatan Hospitaliti</a>
 							<div class="dropdown">
 								<ul>
+									<!-- TODO add Bakery link -->
 									<li class="item"><a href="#">Bakeri Dan Pastri</a></li>
+									<!-- TODO add Kulinari link -->
 									<li class="item"><a href="#">Seni Kulinari</a></li>
 								</ul>
 							</div>
 						</li>
+							<!-- TODO add SLDN link -->
 						<li class="item"><a href="#">Jabatan SLDN</a></li>
 					</ul>
 				</div>

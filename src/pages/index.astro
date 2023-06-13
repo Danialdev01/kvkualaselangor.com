@@ -3,7 +3,7 @@
 import BasicLayout from '../layouts/BasicLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Carousel from '../components/pages/Carousel.astro';
-const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
+// const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
 
@@ -21,13 +21,14 @@ const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 				<div class="img w-full flex justify-center">
 					<img style="max-width: 70%;" src="/info/poster-kemasukkan.jpg" alt="poster">
 				</div>
-				<div class="penerangan w-full ">
+				<div class="penerangan w-full px-4">
 					<br><br>
 					<h3><b>PERMOHONAN TERBUKA KEPADA SEMUA PELAJAR TINGKATAN 3 TAHUN 2022 JOM MASUK KVKS</b></h3>
 					<br>
 					<p>Permohonan secara atas talian telah dibuka bermula 30 September hingga 30 November 2022 Permohonan boleh dibuat melalui link :</p>
-					<br>
+					
 					<a href="https://spskt4.moe.gov.my/">https://spskt4.moe.gov.my/</a>
+					<br><br>
 					<p>
 						SYARAT KHUSUS <br>
 						Minima tahap penguasaan TIGA (3) pentaksiran bilik darjah LIMA (5) matapelajaran iaitu BAHASA MELAYU, SAINS, MATEMATIK, BAHASA INGGERIS dan RBT/Asas Sains Komputer <br><br>
@@ -38,7 +39,10 @@ const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 					</p>
 				</div>
 			</div>
+
+			<!-- TODO list recent aktiviti  -->
 		</div>
+		<br><br>
 	</main>
 </BasicLayout>
 
