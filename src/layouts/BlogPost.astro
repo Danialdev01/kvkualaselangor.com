@@ -33,8 +33,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<center>
-					<!-- TODO fix aspect ratio image on small screen -->
-					{heroImage && <img id="heroPost" src={heroImage} alt="" />}
+					<br><br>
+					<div class="heroPost-container px-2">
+						{heroImage && <img id="heroPost" class="" src={heroImage} alt="" />}
+					</div>
 				</center>
 				<br>
 				<div class="main-container">
@@ -50,6 +52,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<hr />
 					<br>
 					<slot />
+					<br><br>
 				</div>
 			</article>
 		</main>

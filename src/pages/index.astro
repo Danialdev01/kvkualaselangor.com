@@ -1,14 +1,13 @@
 ---
 
 import BasicLayout from '../layouts/BasicLayout.astro';
-import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Carousel from '../components/pages/Carousel.astro';
 const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
 
-<BasicLayout title="Kolej Vokasional Kuala Selangor" description={SITE_DESCRIPTION}>
+<BasicLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<main>
 		<br>
 		<div class="carousel-container w-full">
@@ -17,7 +16,29 @@ const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 				<Carousel />
 			</div>
 		</div>
-		thing
+		<div class="main-container -mt-32 md:mt-0">
+			<div class="md:flex">
+				<div class="img w-full flex justify-center">
+					<img style="max-width: 70%;" src="/info/poster-kemasukkan.jpg" alt="poster">
+				</div>
+				<div class="penerangan w-full ">
+					<br><br>
+					<h3><b>PERMOHONAN TERBUKA KEPADA SEMUA PELAJAR TINGKATAN 3 TAHUN 2022 JOM MASUK KVKS</b></h3>
+					<br>
+					<p>Permohonan secara atas talian telah dibuka bermula 30 September hingga 30 November 2022 Permohonan boleh dibuat melalui link :</p>
+					<br>
+					<a href="https://spskt4.moe.gov.my/">https://spskt4.moe.gov.my/</a>
+					<p>
+						SYARAT KHUSUS <br>
+						Minima tahap penguasaan TIGA (3) pentaksiran bilik darjah LIMA (5) matapelajaran iaitu BAHASA MELAYU, SAINS, MATEMATIK, BAHASA INGGERIS dan RBT/Asas Sains Komputer <br><br>
+						SEBARANG PERTANYAAN, BOLEH HUBUNGI : <br>
+						<b>Pn. Azura binti Mahat - 019 6330027 <b><br>
+						<b>Pn. Nur Hani Binti Halim - 012 6551595 </b><br>
+						<b></b>Pejabat KVKS - 03 32718370</b>
+					</p>
+				</div>
+			</div>
+		</div>
 	</main>
 </BasicLayout>
 

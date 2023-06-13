@@ -25,12 +25,10 @@ import SearchBar from './SearchBar.astro';
 
 	<!-- navbar start -->
 	<!-- logo for mobile -->
-	<div class="mobMenu pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px;padding-right:5%">
+	<div class="mobMenu pt-2 flex md:hidden" style="background-color:#1F2532; width:100%;height:50px;padding-top:5px;padding-right:5%;padding-left:5%">
 
 		<div class="md:hidden w-full">
-			<center>
-				<img style="width:150px" src="/inverted-logo.png" alt="logo">
-			</center>
+			<img style="width:150px" src="/inverted-logo.png" alt="logo">
 		</div>
 		<div class="menu-open"><span class="open"></span></div>
 	</div>
@@ -88,16 +86,45 @@ import SearchBar from './SearchBar.astro';
 
 			<!-- akademik -->
 			<li class="item dropdownitem">
-				<a href="#" class="nav-dropdown">Akademik</a>
+				<a href="#" class="nav-dropdown">Pentadbiran</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="#">Pemasaran</a></li>
-						<li class="item"><a href="#">Perakaunan</a></li>
-						<li class="item"><a href="#">Teknologi Animasi 3D</a></li>
-						<li class="item"><a href="#">Teknologi Sistem Pengurusan Pangkalan Data dan Aplikas Web</a></li>
-						<li class="item"><a href="#">Bakeri Dan Pastri</a></li>
-						<li class="item"><a href="#">Seni Kulinari</a></li>
-						<li class="item"><a href="#">SLDN Perabot</a></li>
+						<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/portaljabatanumumkvks/utama">Jabatan Umum</a></li>
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Jabatan Perniagaan</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="#">Perakaunan</a></li>
+									<li class="item"><a href="#">Pemasaran</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Jabatan Seni Reka</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="#">Teknologi Animasi 3D</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Jabatan ICT</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="#">Teknologi Sistem Pengurusan Pangkalan Data dan Aplikas Web</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Jabatan Hospitaliti</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="#">Bakeri Dan Pastri</a></li>
+									<li class="item"><a href="#">Seni Kulinari</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="item"><a href="#">Jabatan SLDN</a></li>
 					</ul>
 				</div>
 			</li>
@@ -112,10 +139,9 @@ import SearchBar from './SearchBar.astro';
 							<a href="#" class="nav-dropdown">Pautan Rasmi</a>
 							<div class="dropdown">
 								<ul>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/portaljabatanumumkvks/utama">JABATAN PENDIDIKAN UMUM</a></li>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-kjk">UNIT JAMINAN KUALITI</a></li>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/unit-sokongan-akademik/utama">PENGURUSAN SOKONGAN AKADEMIK</a></li>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-tpa/utama">UNIT PENGURUSAN AKADEMIK</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-kjk">Unit Jaminan Kualiti</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/unit-sokongan-akademik/utama">Pengurusan Sokongan Akademik</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-tpa/utama">Unit Pengurusan Akademik</a></li>
 								</ul>
 							</div>
 						</li>
@@ -133,7 +159,7 @@ import SearchBar from './SearchBar.astro';
 			<li class="item"><a href="/aktiviti">Aktiviti</a></li>
 
 			<!-- search bar -->
-			<li class="item">
+			<li class="item z-50">
 				<SearchBar></SearchBar>
 			</li>
 		</ul>

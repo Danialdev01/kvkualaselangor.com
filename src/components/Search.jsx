@@ -49,7 +49,7 @@ function Search({ searchList }) {
         )}
 
           {/* list semua result */}
-        <ul className="list-none">
+        <ul className="list-none z-50">
           {posts &&
             posts.map((post) => (
               <li className="py-2 p-2 flex">
