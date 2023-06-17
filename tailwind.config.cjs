@@ -4,7 +4,16 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
+	
 	plugins: [
 		require('flowbite/plugin')
 	],
+	theme: {
+      backgroundColor: theme => ({
+       ...theme('colors'),
+       'primary': '#FFFFF',
+       'secondary': '#1F2532',
+       'danger': '#e3342f',
+      })
+    }
 }

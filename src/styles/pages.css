@@ -1,0 +1,21 @@
+.card{
+    box-shadow: -3px 7px 5px 0px rgba(176,176,176,0.52);
+    -webkit-box-shadow: -3px 7px 5px 0px rgba(176,176,176,0.52);
+    -moz-box-shadow: -3px 7px 5px 0px rgba(176,176,176,0.52);
+    transition: 0.3s all ease-in-out;
+}
+.card:hover{
+    box-shadow: -10px 17px 35px -21px rgba(0,0,0,0.61);
+    -webkit-box-shadow: -10px 17px 35px -21px rgba(0,0,0,0.61);
+    -moz-box-shadow: -10px 17px 35px -21px rgba(0,0,0,0.61);
+}
+.card-img{
+    overflow: hidden;
+}
+.card-img-zoom{
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+.card-img-zoom:hover{
+    transform: scale(1.2);
+}
