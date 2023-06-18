@@ -1,15 +1,24 @@
 ---
-import { Image } from "@astrojs/image/components/";
-const { post } = Astro.props;
+const { posts } = Astro.props;
+import { Image, Picture } from '@astrojs/image/components';
 
-const {title, heroImage} = post;
+const {title, heroImage, description, pubDate, slug} = posts.frontmatter;
 
 ---
 
-<div class="card-container">
-	<!-- <pre>{JSON.stringify(post.frontmatter, null, 2)}</pre> -->
-	<!-- FIXME fix image not render -->
-	<!-- <Image src={heroImage} /> -->
-	<img src={heroImage} alt="alt">
-	<!-- {post.frontmatter.title} -->
+<div class="cards max-w-sm p-2">
+	<div class="card">
+		<div class="card-img">
+			<!-- FIXME fix image not render -->
+			<!-- <Image src={heroImage} width={300} height={600} alt="Hero Image" /> -->
+			<img src="" alt="" class="card-image-zoom">
+		</div>
+		<div class="card-text p-3 text-left">
+			<p class="date text-sm">{pubDate}</p>
+			<h3 class="font-bold text-lg">{title}</h3>
+			<p>{description}</p><br>
+			<a href={`/aktiviti/${posts.frontmatter.slug}`}><button style="background-color: #1F2532;" class="text-white text-sm px-1 rounded-sm">Lihat</button></a>
+		</div>
+	</div>
 </div>
+<!-- <pre>{JSON.stringify(posts.frontmatter, null, 2)}</pre> -->

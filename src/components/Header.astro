@@ -46,7 +46,7 @@ import SearchBar from './SearchBar.astro';
 
 		<ul class="mmenu-nav px-10" style="background-color:#1F2532;">
 			<!-- offcanvas logo -->
-			<div class="offcanvas-logo md:hidden" style="background-color:white;width:100%;padding:10px;border-radius: 4px;">
+			<div class="offcanvas-logo md:hidden" style="background-color:rgb(218, 218, 218);width:100%;padding:10px;border-radius: 4px;">
 				<img class="md:hidden" style="width:150px" src="/placeholder-social.png" alt="logo">
 			</div>
 			<br>
@@ -60,7 +60,6 @@ import SearchBar from './SearchBar.astro';
 				<div class="dropdown">
 					<ul>
 						<li class="item"><HeaderLink href="/info/pengenalan">Pengenalan</HeaderLink></li>
-						<li class="item"><HeaderLink href="/info/sejarah">Sejarah</HeaderLink></li>
 						<li class="item"><HeaderLink href="/info/carta">Carta Organisasi</HeaderLink></li>
 						<li class="item"><HeaderLink href="/info/objektif">DASAR , OBJEKTIF , MATLAMAT DAN FALSAFAH</HeaderLink></li>
 
@@ -96,7 +95,18 @@ import SearchBar from './SearchBar.astro';
 				<a href="#" class="nav-dropdown">Pentadbiran</a>
 				<div class="dropdown">
 					<ul>
-						<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/portaljabatanumumkvks/utama">Jabatan Umum</a></li>
+						<!-- link Rasmi google site -->
+						<li class="item dropdownitem">
+							<a href="#" class="nav-dropdown">Pengurusan</a>
+							<div class="dropdown">
+								<ul>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/portaljabatanumumkvks/utama">Jabatan Umum</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-kjk">Unit Jaminan Kualiti</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/unit-sokongan-akademik/utama">Pengurusan Sokongan Akademik</a></li>
+									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-tpa/utama">Unit Pengurusan Akademik</a></li>
+								</ul>
+							</div>
+						</li>
 						<li class="item dropdownitem">
 							<a href="#" class="nav-dropdown">Jabatan Perniagaan</a>
 							<div class="dropdown">
@@ -143,22 +153,12 @@ import SearchBar from './SearchBar.astro';
 				</div>
 			</li>
 
-			<!-- kemudahan lain -->
+			<!-- kemudahan -->
 			<li class="item dropdownitem">
-				<a href="#" class="nav-dropdown">Kemudahan Lain</a>
+				<a href="#" class="nav-dropdown">Kemudahan</a>
 				<div class="dropdown">
 					<ul>
-						<!-- link Rasmi google site -->
-						<li class="item dropdownitem">
-							<a href="#" class="nav-dropdown">Pautan Rasmi</a>
-							<div class="dropdown">
-								<ul>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-kjk">Unit Jaminan Kualiti</a></li>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/unit-sokongan-akademik/utama">Pengurusan Sokongan Akademik</a></li>
-									<li class="item"><a href="https://sites.google.com/moe-dl.edu.my/kvks-tpa/utama">Unit Pengurusan Akademik</a></li>
-								</ul>
-							</div>
-						</li>
+						<li class="item"><a href="/info/kemudahan">Kemudahan Yang Disediakan</a></li>
 						<li class="item"><a href="https://www.e-parcelkvks.com/">E-parcel</a></li>
 						<li class="item"><a href="https://sites.google.com/view/mppkvkualaselangor/">MPP KVKS</a></li>
 						<li class="item"><a href="https://ekokedikvks.com/">EKOKEDI</a></li>

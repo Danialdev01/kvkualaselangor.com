@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/MarkdownLayout.astro"
 title: "Objekif"
-slug: DASAR , OBJEKTIF , MATLAMAT DAN FALSAFAH
+slug: dasar-objektif-matlamat-falsafah
 description: "Objektif KVKS"
 heroImage: "/"
 ---

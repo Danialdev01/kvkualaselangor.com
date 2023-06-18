@@ -4,8 +4,11 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import FormattedDate from '../../components/FormattedDate.astro';
+import { Image } from '@astrojs/image/components';
+import Card from '../../components/Card.astro';
 
 // get semua content 
+const allPosts = await Astro.glob("../../content/aktiviti/*.md");
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('aktiviti')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -43,18 +46,19 @@ const posts = (await getCollection('aktiviti')).sort(
 					<div class="links-container px-5">
 						<div class="links" style="display:flex;flex-direction:column-reverse">
 							<!-- display semua content -->
-							<!-- TODO jadikan content card -->
-							{
-								posts.map((post) => (
-									<div class="links">
-										<FormattedDate date={post.data.pubDate} />
-										<a class="pl-3" href={`/aktiviti/${post.slug}/`}>{post.data.title}</a>
-									</div>
-								))
-							}
+							<center>
+								<div class="card-container block md:flex-wrap md:flex">
+									{
+										allPosts.map((posts) => (
+										<Card {posts}/>
+										))
+									}
+								</div>
+							</center>
 						</div>
 					</div>
 				</article>
+				<br><br><br>
 			</section>
 		</main>
 		<Footer />
