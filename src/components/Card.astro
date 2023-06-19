@@ -9,15 +9,13 @@ const {title, heroImage, description, pubDate, slug} = posts.frontmatter;
 <div class="cards max-w-sm p-2">
 	<div class="card">
 		<div class="card-img">
-			<!-- FIXME fix image not render -->
-			<!-- <Image src={heroImage} width={300} height={600} alt="Hero Image" /> -->
-			<img src="" alt="" class="card-image-zoom">
+			<img src={heroImage} alt="" class="card-image-zoom">
 		</div>
 		<div class="card-text p-3 text-left">
 			<p class="date text-sm">{pubDate}</p>
 			<h3 class="font-bold text-lg">{title}</h3>
 			<p>{description}</p><br>
-			<a href={`/aktiviti/${posts.frontmatter.slug}`}><button style="background-color: #1F2532;" class="text-white text-sm px-1 rounded-sm">Lihat</button></a>
+			<a href={`/aktiviti/${posts.frontmatter.slug}`}><button style="background-color: #131038;" class="text-white text-sm px-1 rounded-sm">Lihat</button></a>
 		</div>
 	</div>
 </div>

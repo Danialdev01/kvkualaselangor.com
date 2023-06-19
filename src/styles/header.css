@@ -48,7 +48,7 @@
         font-weight: 500;
         text-decoration: none;
         padding: 10px 10px;
-        background-color: #1F2532;
+        background-color: #2B266D;
         border-radius: 8px;
         display: inline-block;
         font-size: 14px;
@@ -89,7 +89,7 @@
     }
     .mmenu ul li.dropdownitem .dropdown ul {
         list-style: none;
-        background-color: #1F2532;
+        background-color: #2B266D;
         float: left;
         padding: 10px;
         /* border-radius: 0px 8px 8px 8px; */

@@ -3,16 +3,19 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from '@astrojs/image/components';
 import Card from '../../components/Card.astro';
+import Pagination from '../../components/Pagination.astro';
 
-// get semua content 
-const allPosts = await Astro.glob("../../content/aktiviti/*.md");
-import { getCollection } from 'astro:content';
-const posts = (await getCollection('aktiviti')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+
+export async function getStaticPaths({ paginate }){
+	const allPosts = await Astro.glob("../../content/aktiviti/*.md");
+	allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+	return paginate(allPosts,{
+		pageSize:3,
+	})
+}
+const {page} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -49,7 +52,7 @@ const posts = (await getCollection('aktiviti')).sort(
 							<center>
 								<div class="card-container block md:flex-wrap md:flex">
 									{
-										allPosts.map((posts) => (
+										page.data.map((posts) => (
 										<Card {posts}/>
 										))
 									}
@@ -58,9 +61,15 @@ const posts = (await getCollection('aktiviti')).sort(
 						</div>
 					</div>
 				</article>
+				<center><br><br><br>
+					<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+				</center>
+
 				<br><br><br>
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+
