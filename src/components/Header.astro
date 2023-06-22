@@ -13,7 +13,7 @@ import SearchBar from './SearchBar.astro';
 				<a class="px-2" href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="/icons/youtube.png" alt="youtube"></a>
 				<a class="px-2" href="https://www.facebook.com/kvks.sel/"><img src="/icons/facebook.png" alt="facebook"></a>
 				<a class="px-2" href="https://www.instagram.com/kvkualaselangor_official/"><img src="/icons/instagram.png" alt="instagram"></a>
-				<a class="px-2" href="https://www.google.com/search?q=google+maps+kv+kuala+selangor&oq=google+maps+&aqs=chrome.1.69i57j35i39j0i131i433i512l3j0i512l2j0i131i433i512j0i512l2.4128j0j7&sourceid=chrome&ie=UTF-8#"><img src="/icons/googlemaps.png" alt="googlemaps"></a>
+				<a class="px-2" href="https://www.google.com/maps/dir/2.9229056,101.6929667/google+maps+kv+kuala+selangor/@3.1457593,101.3959934,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31cc60db623bb93d:0x3c9391707e336109!2m2!1d101.3981924!2d3.3831747?entry=ttu"><img src="/icons/googlemaps.png" alt="googlemaps"></a>
 			</p>
 		</div>
 		<hr>
@@ -25,7 +25,7 @@ import SearchBar from './SearchBar.astro';
 
 	<!-- navbar start -->
 	<!-- logo for mobile -->
-	<div class="mobMenu pt-2 flex md:hidden" style="background-color:#fcfcfc; width:100%;height:60px;padding-top:5px;padding-right:5%;padding-left:5%">
+	<div class="mobMenu pt-2 flex md:hidden fixed z-50" style="background-color:#fcfcfc; width:100%;height:60px;padding-top:5px;padding-right:5%;padding-left:5%">
 
 		<div class="md:hidden w-full">
 			<div class="logo-container p-1 bg-white" style="width: fit-content;border-radius: 4px;">
@@ -36,7 +36,6 @@ import SearchBar from './SearchBar.astro';
 			<img class="w-10" src="/icons/ham-icon.png" alt="ham-icon">
 		</div>
 	</div>
-
 
 	<!-- navbar desk -->
 	<!-- TODO buat navbar sticky -->
@@ -173,7 +172,7 @@ import SearchBar from './SearchBar.astro';
 			<li class="item"><a href="/aktiviti">Aktiviti</a></li>
 
 			<!-- search bar -->
-			<li class="item z-50">
+			<li class="item z-50 md:w-full">
 				<SearchBar></SearchBar>
 			</li>
 		</ul>

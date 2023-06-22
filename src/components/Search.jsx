@@ -34,7 +34,7 @@ function Search({ searchList }) {
           id="search"
           value={query}
           onChange={handleOnSearch}
-          className="block w-21px text-sm h-6 text-gray-900 border border-gray-300 bg-gray-50 mt-2 px-2 rounded-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          className="block w-21px text-sm h-6 text-gray-900 border border-gray-300 bg-gray-50 mt-2 px-2 rounded-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 md:w-100"
           placeholder="Search Aktiviti"
         />
       </div>
