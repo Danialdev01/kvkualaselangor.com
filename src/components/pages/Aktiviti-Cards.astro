@@ -1,0 +1,30 @@
+---
+
+import Card from "../Card.astro";
+
+const allPosts = await Astro.glob("../../content/aktiviti/*.md");
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+---
+
+<br>
+<br>
+<h2>Aktiviti Terkini</h2>
+<br>
+<div class="aktiviti-cards">
+    {
+        allPosts.slice(0, 4).map((posts) => (
+            <article class="card">
+			<a href={`/aktiviti/${posts.frontmatter.slug}`}>
+                <div class="card-content">
+                    <img src={posts.frontmatter.heroImage} alt={posts.frontmatter.title}>
+                    <div class="text">
+                        <h3>{posts.frontmatter.title}</h3>
+                        <p class="desc text-black">{posts.frontmatter.description}</p>
+                    </div>
+                </div>
+			</a>
+	        </article>
+            ))
+        }
+</div>

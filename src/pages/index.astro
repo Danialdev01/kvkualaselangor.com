@@ -3,6 +3,7 @@
 import BasicLayout from '../layouts/BasicLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Carousel from '../components/pages/Carousel.astro';
+import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 // const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
@@ -29,13 +30,13 @@ import Carousel from '../components/pages/Carousel.astro';
 				<!-- Card 1 -->
 				<div class="cards-x w-full p-3 h-auto">
 					<a href="">
-						<div class="card w-full">
+						<div class="card w-full rounded">
 							<div class="card-img w-full">
-								<img class="card-img-zoom " src="/info/gallery1.jpg" alt="some imgae">
+								<img class="card-img-zoom rounded" src="/info/gallery1.jpg" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg">KEBOLEHPASARAN PELAJAR YANG TINGGI</h3>
-								<p class="text-base text-black">Kami mendedahkan pelajar terhadap kemahiran yang diperlukan dalam bidang mereka yang tertentu untuk memastikan mereka mempunyai semua skop pekerjaan dalam bidang mereka.</p>
+								<h3 class="font-bold text-lg pb-3 text-black">KEBOLEHPASARAN PELAJAR YANG TINGGI</h3>
+								<p class="text-base text-black">Mendedahkan pelajar dengan kemahiran vokasional supaya mereka dapat berdaya saing dalam undustri pekerjaan.</p>
 							</div>
 						</div>
 					</a>
@@ -44,13 +45,13 @@ import Carousel from '../components/pages/Carousel.astro';
 				<!-- Card 2 -->
 				<div class="cards-x w-full p-3 h-auto">
 					<a href="/info/kemudahan">
-						<div class="card w-full">
+						<div class="card w-full rounded">
 							<div class="card-img w-full h-30">
-								<img class="card-img-zoom " src="/info/gallery2.webp" alt="some imgae">
+								<img class="card-img-zoom rounded" src="/info/gallery2.webp" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg">FASILITI YANG KONDUSIF</h3>
-								<p class="text-base text-black">Kami menyediakan fasiliti yang selesa untuk memastikan pelajar sentiasa dalam keadaan produktif dan sedia untuk menuntut ilmu.</p>
+								<h3 class="font-bold text-lg pb-5 text-black">FASILITI YANG KONDUSIF</h3>
+								<p class="text-base text-black">Fasiliti yang selesa untuk memastikan pelajar sentiasa dalam keadaan produktif dan sedia untuk menuntut ilmu.</p>
 							</div>
 						</div>
 					</a>
@@ -59,13 +60,13 @@ import Carousel from '../components/pages/Carousel.astro';
 				<!-- Card 3 -->
 				<div class="cards-x w-full p-3 h-auto">
 					<a href="">
-						<div class="card w-full">
+						<div class="card w-full rounded">
 							<div class="card-img w-full h-30">
-								<img class="card-img-zoom " src="/info/gallery3.png" alt="some imgae">
+								<img class="card-img-zoom rounded" src="/info/gallery3.png" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg">MELAHIRKAN PELAJAR YANG BERSAHSIAH TINGGI</h3>
-								<p class="text-base text-black">Kami memastikan setiap pelajar dididik dengan akhlak dan sahsiah yang terpuji untuk memastikan mereka boleh menjadi masyarakat yang berguna.</p>
+								<h3 class="font-bold text-lg pb-3 text-black">MELAHIRKAN PELAJAR YANG BERSAHSIAH TINGGI</h3>
+								<p class="text-base text-black">Melahirkan pelajar yang menghormati satu sama lain, berbakti kepada masyarakat dan mempunyai ciri-ciri pemimpin.</p>
 							</div>
 						</div>
 					</a>
@@ -76,7 +77,7 @@ import Carousel from '../components/pages/Carousel.astro';
 			<!-- Ucapan PENGARAH -->
 			<br>
 			<center>
-				<div class="ucapan-container card max-w-6xl">
+				<div class="ucapan-container card max-w-6xl rounded">
 					<div class="ucapan block md:flex md:pr-20">
 						<div class="text-ucapan w-full text-left p-4">
 							<h3 style="font-size:1rem" class="font-bold">Lorem ipsum dolor sit.</h3><br>
@@ -87,11 +88,17 @@ import Carousel from '../components/pages/Carousel.astro';
 					</div>
 				</div>
 			</center>
+
+			<br>
+			<center>
+				<div class="aktiviti-cards-container">
+					<AktivitiCards />
+				</div>
+			</center>
 		</div>
 
 		<!-- Permohonan -->
 		<div class="main-container">
-			<br>
 			<div class="md:flex">
 				<div class="img w-full flex justify-center">
 					<img style="max-width: 70%;" src="/info/poster-kemasukkan.jpg" alt="poster">
