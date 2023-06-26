@@ -70,7 +70,7 @@
       border-radius: 10px;
       
       grid-template-columns: 51.8% 19.02% 5.58% 23.6%;
-      grid-template-rows: 51.8% 19.02% 5.58% 23.6%;
+      grid-template-rows: 51.8% 29.02% 5.58% 23.6%;
       grid-template-areas: 
         "A B B B"
         "A D D C"
@@ -122,14 +122,15 @@
     }
     .aktiviti-cards .card a .card-content img{
         filter: brightness(50%);
-        background-size: cover;
-        width: 100%;
+        /* background-size: auto; */
+        width: 50vw;
         height: 100%;
         object-fit: cover;
+
         transition: 0.5s all ease-in-out;
     }
     .aktiviti-cards .card a .card-content img:hover{
-        width: 130%;
+        width: 50vw;
         height: 130%;
     }
     
