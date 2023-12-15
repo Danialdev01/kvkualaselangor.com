@@ -4,7 +4,6 @@ import BasicLayout from '../layouts/BasicLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Carousel from '../components/pages/Carousel.astro';
 import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
-// const allPosts = await Astro.glob("../content/aktiviti/*.{md,mdx}");
 
 ---
 
@@ -18,7 +17,7 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 		</div>
 
 		<!-- Section Teroka -->
-		<div class="main-container mb-48">
+		<div class="main-container mb-50">
 			<br>
 			<center>
 				<h2 class="text-4xl pb-1" style="font-size:2rem !important">TEROKAI KAMI</h2>
@@ -29,13 +28,13 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 
 				<!-- Card 1 -->
 				<div class="cards-x w-full p-3 h-auto">
-					<a href="">
-						<div class="card w-full rounded">
+					<a href="/info/pengenalan">
+						<div class="card w-full rounded-md">
 							<div class="card-img w-full">
-								<img class="card-img-zoom rounded" src="/info/gallery1.jpg" alt="some imgae">
+								<img class="card-img-zoom rounded-md" src="/info/gallery1.jpg" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg pb-3 text-black">KEBOLEHPASARAN PELAJAR YANG TINGGI</h3>
+								<h3 class="font-bold text-lg pb-5">Kebolehpasaran Pelajar yang Tinggi</h3>
 								<p class="text-base text-black">Mendedahkan pelajar dengan kemahiran vokasional supaya mereka dapat berdaya saing dalam undustri pekerjaan.</p>
 							</div>
 						</div>
@@ -45,13 +44,13 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 				<!-- Card 2 -->
 				<div class="cards-x w-full p-3 h-auto">
 					<a href="/info/kemudahan">
-						<div class="card w-full rounded">
+						<div class="card w-full rounded-md">
 							<div class="card-img w-full h-30">
-								<img class="card-img-zoom rounded" src="/info/gallery2.webp" alt="some imgae">
+								<img class="card-img-zoom rounded-md" src="/info/gallery2.webp" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg pb-5 text-black">FASILITI YANG KONDUSIF</h3>
-								<p class="text-base text-black">Fasiliti yang selesa untuk memastikan pelajar sentiasa dalam keadaan produktif dan sedia untuk menuntut ilmu.</p>
+								<h3 class="font-bold text-lg pb-5">Persekitaran yang Kondusif</h3>
+								<p class="text-base text-black">Persekitaran yang selesa untuk memastikan pelajar sentiasa dalam keadaan produktif dan sedia untuk menuntut ilmu.</p>
 							</div>
 						</div>
 					</a>
@@ -59,13 +58,13 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 
 				<!-- Card 3 -->
 				<div class="cards-x w-full p-3 h-auto">
-					<a href="">
-						<div class="card w-full rounded">
+					<a href="/info/objektif">
+						<div class="card w-full rounded-md">
 							<div class="card-img w-full h-30">
-								<img class="card-img-zoom rounded" src="/info/gallery3.png" alt="some imgae">
+								<img class="card-img-zoom rounded-md" src="/info/gallery3.png" alt="some imgae">
 							</div>
 							<div class="text p-3">
-								<h3 class="font-bold text-lg pb-3 text-black">MELAHIRKAN PELAJAR YANG BERSAHSIAH TINGGI</h3>
+								<h3 class="font-bold text-lg pb-3">Melahirkan Pelajar yang Bersahsia Tinggi</h3>
 								<p class="text-base text-black">Melahirkan pelajar yang menghormati satu sama lain, berbakti kepada masyarakat dan mempunyai ciri-ciri pemimpin.</p>
 							</div>
 						</div>
@@ -77,21 +76,28 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 			<!-- Ucapan PENGARAH -->
 			<br>
 			<center>
-				<div class="ucapan-container card max-w-6xl rounded">
+				<div class="ucapan-container card max-w-6xl rounded-md">
 					<div class="ucapan block md:flex md:pr-20">
 						<div class="text-ucapan w-full text-left p-4">
-							<h3 style="font-size:1rem" class="font-bold">Lorem ipsum dolor sit.</h3><br>
+							<h3 style="font-size:1rem" class="font-bold">En. Mohd Daud Bin Ismail <br> (Pengarah Kolej Vokasional Kuala Selangor): </h3><br>
 							<p><i>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, consequuntur?"</i></p><br>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis harum, numquam amet ullam ad quos molestias delectus beatae totam dolorum officia quis itaque, corporis dolor repellendus ex perspiciatis nam?</p>
 						</div>
-						<img src="info/daud-ismail.png" alt="pengarah kvks">
+						<div class="img-ucapan w-fit pt-2">
+							<img src="info/daud-ismail.png" alt="pengarah kvks">
+							
+						</div>
 					</div>
 				</div>
 			</center>
 
+			<!-- Aktiviti Terkini -->
+			<br>
+			<br>
 			<br>
 			<center>
 				<div class="aktiviti-cards-container">
+					<h2>Aktiviti Terkini</h2>
 					<AktivitiCards />
 				</div>
 			</center>
@@ -122,10 +128,7 @@ import AktivitiCards from '../components/pages/Aktiviti-Cards.astro';
 				</div>
 			</div>
 
-			<!-- TODO list recent aktiviti  -->
 		</div>
 		<br><br>
 	</main>
 </BasicLayout>
-
-

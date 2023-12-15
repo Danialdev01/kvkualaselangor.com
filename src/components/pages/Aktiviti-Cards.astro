@@ -8,9 +8,6 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 ---
 
 <br>
-<br>
-<h2>Aktiviti Terkini</h2>
-<br>
 <div class="aktiviti-cards">
     {
         allPosts.slice(0, 4).map((posts) => (
@@ -25,6 +22,6 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
                 </div>
 			</a>
 	        </article>
-            ))
-        }
+        ))
+    }
 </div>

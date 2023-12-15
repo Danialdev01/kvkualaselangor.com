@@ -29,6 +29,9 @@ b {
 	font-family: 'Open Sans',Arial,sans-serif;
 	/* color: #222; */
 }
+h3{
+	color: #3C3F41;
+}
 h1{
 	/* font-size:1.5rem  !important; */
 	font-weight: bold !important;
