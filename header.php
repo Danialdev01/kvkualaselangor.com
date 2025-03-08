@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php the_title()?></title>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri()?>/src/image/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/logo/logo.png?raw=true" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/src/css/output.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/src/css/extra.css">
-    <script type="module" src="<?php echo get_template_directory_uri()?>/src/js/extra.js"></script>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Danialdev01/kvkualaselangor.com/refs/heads/main/src/css/extra.css">
+    <script type="module" src="https://raw.githubusercontent.com/Danialdev01/kvkualaselangor.com/refs/heads/main/src/js/extra.js"></script>
     <style>
         h1{
             font-size: 3rem;
@@ -60,7 +59,7 @@
 		<hr class="astro-3EF6KSR2">
 		<!-- top logo icon -->
 		<div class="logo p-3 astro-3EF6KSR2" style="padding-left:4% !important">
-			<img style="width:160px" src="<?php echo get_template_directory_uri()?>/src/image/logo/banner.png" alt="logo" class="astro-3EF6KSR2">
+			<img style="width:160px" src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/logo/banner.png?raw=true" alt="logo" class="astro-3EF6KSR2">
 		</div>
 	</div>
 
@@ -70,11 +69,11 @@
 
 		<div class="md:hidden w-full astro-3EF6KSR2">
 			<div class="logo-container p-1 bg-white astro-3EF6KSR2" style="width: fit-content;border-radius: 4px;">
-				<img style="width:130px" src="<?php echo get_template_directory_uri()?>/src/image/logo/banner.png" alt="logo" class="astro-3EF6KSR2">
+				<img style="width:130px" src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/logo/banner.png?raw=true" alt="logo" class="astro-3EF6KSR2">
 			</div>
 		</div>
 		<div class="menu-open astro-3EF6KSR2">
-			<img class="w-10 astro-3EF6KSR2" src="<?php echo get_template_directory_uri()?>/src/image/icons/ham-icon.png" alt="ham-icon">
+			<img class="w-10 astro-3EF6KSR2" src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/icons/ham-icon.png?raw=true" alt="ham-icon">
 		</div>
 	</div>
 
@@ -87,7 +86,7 @@
 		<ul class="mmenu-nav px-10 astro-3EF6KSR2" style="background-color:#2B266D;">
 			<!-- offcanvas logo -->
 			<div class="offcanvas-logo md:hidden astro-3EF6KSR2" style="background-color:rgb(255, 255, 255);width:100%;padding:10px;border-radius: 4px;">
-				<img class="md:hidden astro-3EF6KSR2" style="width:150px" src="<?php echo get_template_directory_uri()?>/src/image/logo/banner.png" alt="logo">
+				<img class="md:hidden astro-3EF6KSR2" style="width:150px" src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/logo/banner.png?raw=true" alt="logo">
 			</div>
 			<br class="astro-3EF6KSR2">
             
