@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php the_title()?></title>
-    <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri());?>/image/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri());?>/src/image/logo/logo.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>

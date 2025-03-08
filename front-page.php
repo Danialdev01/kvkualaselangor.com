@@ -21,7 +21,7 @@
                         echo '<article class="card rounded-md">'; // Start an unordered list
                         $query->the_post(); // Set up post data
 
-                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); // Get the thumbnail URL
+                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Get the thumbnail URL
                         // echo '<a href="' . get_permalink() . '">';
                         // echo '<img src="' . get_permalink() . '' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '" />'; // Set the thumbnail as the src of an img tag
                         // echo '</a>'; // Link to the post
