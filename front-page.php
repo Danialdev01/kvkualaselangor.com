@@ -79,7 +79,7 @@
             </div> -->
 
             <video class="rounded-md w-full" class="px-10" loop autoplay muted>
-                <source src="https://github.com/Danialdev01/kvkualaselangor.com/raw/refs/heads/main/src/video/promo.mp4" type="video/mp4">
+                <source src="<?php echo esc_url( get_template_directory_uri());?>/src/video/promo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
