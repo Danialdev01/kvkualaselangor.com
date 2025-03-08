@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/src/css/extra.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri());?>/src/css/extra.css">
     <script type="module" src="https://raw.githubusercontent.com/Danialdev01/kvkualaselangor.com/refs/heads/main/src/js/extra.js"></script>
     <style>
         h1{
@@ -50,7 +50,7 @@
 			<p class="flex pr-20 astro-3EF6KSR2">
 
 				<!-- top social icon -->
-				<a class="px-3 astro-3EF6KSR2" style="width:45px" href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="<?php echo get_template_directory_uri();?>/src/image/icons/youtube.png" alt="youtube" class="astro-3EF6KSR2"></a>
+				<a class="px-3 astro-3EF6KSR2" style="width:45px" href="https://www.youtube.com/@kvkualaselangor_official8551"><img src="<?php echo esc_url( get_template_directory_uri());?>/src/image/icons/youtube.png?raw=true" alt="youtube" class="astro-3EF6KSR2"></a>
 				<a class="px-3 astro-3EF6KSR2" style="width:45px" href="https://www.facebook.com/kvks.sel/"><img src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/icons/facebook.png?raw=true" alt="facebook" class="astro-3EF6KSR2"></a>
 				<a class="px-3 astro-3EF6KSR2" style="width:45px" href="https://www.instagram.com/kvkualaselangor_official/"><img src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/icons/instagram.png?raw=true" alt="instagram" class="astro-3EF6KSR2"></a>
 				<a class="px-3 astro-3EF6KSR2" style="width:43px" href="https://www.google.com/maps/dir/2.9229056,101.6929667/google+maps+kv+kuala+selangor/@3.1457593,101.3959934,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31cc60db623bb93d:0x3c9391707e336109!2m2!1d101.3981924!2d3.3831747?entry=ttu"><img src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/icons/google-maps.png?raw=true" alt="googlemaps" class="astro-3EF6KSR2"></a>
