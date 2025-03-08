@@ -4,7 +4,7 @@
             <center>
                 <div class="hidden md:block mb-6 md:mb-0">
                     <a href="https://kvkualaselangor.com" class="flex items-center bg-white px-2 pb-2 rounded-lg">
-                        <img src="<?php echo get_template_directory_uri()?>/src/image/logo/banner.png" class="mt-3 mr-3 h-10 sm:h-12" alt="Kolej Vokasional Kuala Selangor Logo" />
+                        <img src="https://github.com/Danialdev01/kvkualaselangor.com/blob/main/src/image/logo/banner.png?raw=true" class="mt-3 mr-3 h-10 sm:h-12" alt="Kolej Vokasional Kuala Selangor Logo" />
                     </a>
                 </div>
             </center>

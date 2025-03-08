@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/Danialdev01/kvkualaselangor.com/refs/heads/main/src/css/extra.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/src/css/extra.css">
     <script type="module" src="https://raw.githubusercontent.com/Danialdev01/kvkualaselangor.com/refs/heads/main/src/js/extra.js"></script>
     <style>
         h1{
