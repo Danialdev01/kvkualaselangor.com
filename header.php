@@ -28,15 +28,23 @@
 </head>
 
 <?php 
+    global $type;
     $menu_data = wp_nav_menu( 
         array(
-            'theme_location' => 'top-menu', 
+            'theme_location' => $type, 
             'echo' => false
         )
     );
+    
+    if(!isset($type)){
+        $type = "top-menu";
+    }
 
+    // echo htmlspecialchars($menu_data);
+    // echo "<br>";
+    
     require_once get_template_directory() . '/functions/menu.php';
-    $menu = parse_menu($menu_data);
+    $menu = parse_menu($menu_data, "menu-$type");
 
     // echo var_dump($menu);
     $menu_list = remove_duplicate_parents($menu);

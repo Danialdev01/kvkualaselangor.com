@@ -1,5 +1,5 @@
 <?php
-function parse_menu($html) {
+function parse_menu($html, $type) {
     $dom = new DOMDocument();
     // Suppress errors due to malformed HTML
     libxml_use_internal_errors(true);
@@ -7,7 +7,7 @@ function parse_menu($html) {
     libxml_clear_errors();
 
     $menu = [];
-    $menu_items = $dom->getElementById('menu-top-menu')->getElementsByTagName('li');
+    $menu_items = $dom->getElementById($type)->getElementsByTagName('li');
 
     // Array to hold unique menu items globally
     $unique_menu_items = [];

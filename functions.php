@@ -25,8 +25,16 @@ if ( function_exists( 'add_theme_support' ) ) {
 register_nav_menus(
 	array(
 		'top-menu' => 'Top Menu Location',
-		'mobile-menu' => 'Mobile Menu Location',
+		'warga-top-menu' => 'Warga Top Menu Location',
+		// 'mobile-menu' => 'Mobile Menu Location',
 	)
 );
+
+
+if (is_page('warga')) {
+
+    get_template_part('page', 'warga');
+
+} 
 
 ?>
