@@ -1,10 +1,9 @@
 <?php $type = "top-menu"; get_header();?>
 
-<main class="pt-10">
+<main class="pt-5">
 
-    <?php
-        echo do_shortcode('[smartslider3 slider="2"]');
-    ?> 
+    <?php echo do_shortcode('[smartslider3 slider="2"]');?> 
+    <br><br><br>
 
     <?php get_template_part('components/aktiviti'); ?>
     <br><br><br>
