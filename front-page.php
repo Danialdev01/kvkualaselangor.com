@@ -2,6 +2,10 @@
 
 <main class="pt-10">
 
+    <?php
+        echo do_shortcode('[smartslider3 slider="2"]');
+    ?> 
+
     <?php get_template_part('components/aktiviti'); ?>
     <br><br><br>
 
