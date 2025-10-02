@@ -131,7 +131,7 @@
             </main>
 
             <!-- Sidebar -->
-            <aside class="w-full lg:w-1/4">
+            <aside class="lg:w-1/4">
                 <div class="sticky top-24 space-y-6">
                     <!-- Quick Links Card -->
                     <div class="bg-white p-4 rounded-xl shadow-md">
