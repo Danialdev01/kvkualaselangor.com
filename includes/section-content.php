@@ -191,7 +191,7 @@
                             while ($query->have_posts()) {
                                 $query->the_post();
                                 
-                                $read_time = ceil(str_word_count(get_the_content()) / 200);
+                                $read_time = ceil(str_word_count(get_the_content()) / 20);
                                 
                                 echo '<div class="border-b border-gray-200 pb-4 last:border-0 last:pb-0">';
                                 echo '<h4 class="font-bold text-base text-gray-900 mb-1 pt-2">';
