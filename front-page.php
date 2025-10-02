@@ -2,7 +2,6 @@
 
 <main class="pt-5">
 
-    <?php echo do_shortcode('[smartslider3 slider="2"]');?> 
     <br><br><br>
 
     <?php get_template_part('components/aktiviti'); ?>
@@ -40,8 +39,6 @@
         </div>
         <br>
     </center>
-
-    <?php get_template_part('includes/section', 'content');?>
 
 </main>
 
