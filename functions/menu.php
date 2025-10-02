@@ -1,129 +1,140 @@
 <?php
 function parse_menu($html, $type) {
-    $dom = new DOMDocument();
-    // Suppress errors due to malformed HTML
-    libxml_use_internal_errors(true);
-    $dom->loadHTML($html);
-    libxml_clear_errors();
+    // Early return for empty HTML
+    if (empty($html) || !is_string($html)) {
+        error_log("parse_menu: Empty or invalid HTML provided for menu type: " . $type);
+        return [];
+    }
 
-    $menu = [];
-    $menu_items = $dom->getElementById($type)->getElementsByTagName('li');
+    try {
+        $dom = new DOMDocument();
+        libxml_use_internal_errors(true);
+        
+        // Ensure proper HTML structure
+        $wrapped_html = '<!DOCTYPE html><html><body><div id="menu-container">' . $html . '</div></body></html>';
+        
+        if (!$dom->loadHTML($wrapped_html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD)) {
+            error_log("parse_menu: Failed to load HTML for menu type: " . $type);
+            return [];
+        }
+        
+        libxml_clear_errors();
 
-    // Array to hold unique menu items globally
-    $unique_menu_items = [];
+        $menu = [];
+        
+        // Try multiple ways to find the menu
+        $menu_container = $dom->getElementById($type);
+        
+        if (!$menu_container) {
+            $menu_container = $dom->getElementById('menu-container');
+        }
+        
+        if (!$menu_container) {
+            // Try to find any UL element
+            $uls = $dom->getElementsByTagName('ul');
+            if ($uls->length > 0) {
+                $menu_container = $uls->item(0);
+            }
+        }
 
-    foreach ($menu_items as $item) {
-        // Get the title and URL of the main menu item
-        $link = $item->getElementsByTagName('a')->item(0);
-        $title = $link->nodeValue;
-        $url = $link->getAttribute('href');
+        if (!$menu_container) {
+            error_log("parse_menu: No menu container found for type: " . $type);
+            return [];
+        }
 
-        // Create a unique key for the main menu item
-        $main_key = $title . '|' . $url;
+        $menu_items = $menu_container->getElementsByTagName('li');
+        
+        if ($menu_items->length === 0) {
+            error_log("parse_menu: No menu items found in container for type: " . $type);
+            return [];
+        }
 
-        // Check if the main menu item is unique
-        if (!isset($unique_menu_items[$main_key])) {
-            // Initialize the menu item array
-            $menu_item = [
-                'title' => $title,
-                'url' => $url,
-                'sub_menu' => []
-            ];
+        $unique_menu_items = [];
 
-            // Add the main menu item to the unique menu items
-            $unique_menu_items[$main_key] = $menu_item;
+        foreach ($menu_items as $item) {
+            $links = $item->getElementsByTagName('a');
+            if ($links->length === 0) {
+                continue;
+            }
+            
+            $link = $links->item(0);
+            $title = trim($link->textContent);
+            $url = $link->getAttribute('href');
 
-            // Check if the item has a sub-menu
-            $sub_menu = $item->getElementsByTagName('ul');
-            if ($sub_menu->length > 0) {
-                // Get the sub-menu items
-                foreach ($sub_menu->item(0)->getElementsByTagName('li') as $sub_item) {
-                    $sub_link = $sub_item->getElementsByTagName('a')->item(0);
-                    $sub_title = $sub_link->nodeValue;
-                    $sub_url = $sub_link->getAttribute('href');
+            if (empty($title)) {
+                continue;
+            }
 
-                    // Create a unique key for the submenu item
-                    $sub_key = $sub_title . '|' . $sub_url;
+            $main_key = $title . '|' . $url;
 
-                    // Check if the submenu item is unique
-                    if (!isset($unique_menu_items[$sub_key])) {
-                        // Add to unique menu items
-                        $unique_menu_items[$sub_key] = [
-                            'title' => $sub_title,
-                            'url' => $sub_url
-                        ];
+            if (!isset($unique_menu_items[$main_key])) {
+                $menu_item = [
+                    'title' => $title,
+                    'url' => $url,
+                    'sub_menu' => []
+                ];
 
-                        // Add the submenu item to the current menu item
-                        $menu_item['sub_menu'][] = $unique_menu_items[$sub_key];
+                // Look for submenus
+                $sub_menus = $item->getElementsByTagName('ul');
+                if ($sub_menus->length > 0) {
+                    $sub_items = $sub_menus->item(0)->getElementsByTagName('li');
+                    
+                    foreach ($sub_items as $sub_item) {
+                        $sub_links = $sub_item->getElementsByTagName('a');
+                        if ($sub_links->length > 0) {
+                            $sub_link = $sub_links->item(0);
+                            $sub_title = trim($sub_link->textContent);
+                            $sub_url = $sub_link->getAttribute('href');
+
+                            if (!empty($sub_title)) {
+                                $sub_key = $sub_title . '|' . $sub_url;
+                                
+                                if (!isset($unique_menu_items[$sub_key])) {
+                                    $menu_item['sub_menu'][] = [
+                                        'title' => $sub_title,
+                                        'url' => $sub_url
+                                    ];
+                                    $unique_menu_items[$sub_key] = true;
+                                }
+                            }
+                        }
                     }
                 }
+
+                $unique_menu_items[$main_key] = $menu_item;
+                $menu[] = $menu_item;
             }
-
-            // Update the unique menu items with the current menu item
-            $unique_menu_items[$main_key] = $menu_item;
         }
-    }
 
-    // Convert the unique menu items back to a simple array
-    return array_values($unique_menu_items);
+        return $menu;
+
+    } catch (Exception $e) {
+        error_log("parse_menu: Exception occurred for menu type " . $type . ": " . $e->getMessage());
+        return [];
+    }
 }
 
-
+// Keep the remove_duplicate_parents function as is
 function remove_duplicate_parents($menu) {
-
-    // Array to hold unique parent menu items
-
     $unique_menu = [];
-
-    // Array to track submenu items that have been added as parents
-
     $submenu_as_parent = [];
 
-
-    // First, we will collect all submenu items that are also parents
-
     foreach ($menu as $item) {
-
         if (!empty($item['sub_menu'])) {
-
             foreach ($item['sub_menu'] as $sub_item) {
-
-                // Create a unique key for the submenu item
-
                 $sub_key = $sub_item['title'] . '|' . $sub_item['url'];
-
-                $submenu_as_parent[$sub_key] = true; // Mark this submenu as a parent
-
+                $submenu_as_parent[$sub_key] = true;
             }
-
         }
-
     }
-
-
-    // Now, we will build the unique menu array
 
     foreach ($menu as $item) {
-
-        // Create a unique key for the parent menu item
-
         $parent_key = $item['title'] . '|' . $item['url'];
-
-
-        // Check if the parent item is not a submenu item
-
         if (!isset($submenu_as_parent[$parent_key])) {
-
-            // If it's a unique parent, add it to the unique menu array
-
             $unique_menu[] = $item;
-
         }
-
     }
-
 
     return $unique_menu;
-
 }
 ?>
