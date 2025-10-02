@@ -30,6 +30,17 @@ register_nav_menus(
 	)
 );
 
+// Force template for posts page
+function force_blog_template($template) {
+    if (is_home() && !is_front_page()) {
+        $new_template = locate_template(array('template-blog.php'));
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'force_blog_template', 99);
 
 if (is_page('warga')) {
 
