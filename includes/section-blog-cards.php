@@ -11,20 +11,23 @@
         <div class="flex flex-col lg:flex-row gap-6">
             <!-- Main Content -->
             <main class="w-full lg:w-3/4">
-                <!-- Breadcrumb -->
+                <!-- Flowbite Breadcrumb -->
                 <nav class="flex mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="text-gray-600 hover:text-primary">
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+                                <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                                </svg>
                                 <?php _e('Utama', 'textdomain'); ?>
                             </a>
                         </li>
                         <li aria-current="page">
-                            <div class="flex items-center">
-                                <svg class="w-3 h-3 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
                                 </svg>
-                                <span class="text-primary">Blog</span>
+                                <span class="inline-flex items-center text-sm font-medium text-primary">Blog</span>
                             </div>
                         </li>
                     </ol>
