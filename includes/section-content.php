@@ -4,11 +4,14 @@
     <div class="flex flex-col lg:flex-row gap-6 relative">
         <!-- Main Content -->
         <div class="w-full lg:w-3/4">
-            <!-- Breadcrumb -->
+            <!-- Flowbite Breadcrumb -->
             <nav class="flex mb-6" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="text-gray-600 hover:text-primary">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                            </svg>
                             <?php _e('Utama', 'textdomain'); ?>
                         </a>
                     </li>
@@ -18,16 +21,16 @@
                     
                     if (is_single() && $blog_page) {
                         echo '<li>';
-                        echo '<div class="flex items-center">';
-                        echo '<svg class="w-3 h-3 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>';
-                        echo '<a href="' . esc_url(get_permalink($blog_page)) . '" class="text-gray-600 hover:text-primary">' . get_the_title($blog_page) . '</a>';
+                        echo '<div class="flex items-center space-x-1.5">';
+                        echo '<svg class=" w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>';
+                        echo '<a href="' . esc_url(get_permalink($blog_page)) . '" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">' . get_the_title($blog_page) . '</a>';
                         echo '</div>';
                         echo '</li>';
-                    } elseif (is_category()) {
+                    } elseif (is_category() && $blog_page) {
                         echo '<li>';
-                        echo '<div class="flex items-center">';
-                        echo '<svg class="w-3 h-3 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>';
-                        echo '<a href="' . esc_url(get_permalink($blog_page)) . '" class="text-gray-600 hover:text-primary">' . get_the_title($blog_page) . '</a>';
+                        echo '<div class="flex items-center space-x-1.5">';
+                        echo '<svg class="w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>';
+                        echo '<a href="' . esc_url(get_permalink($blog_page)) . '" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">' . get_the_title($blog_page) . '</a>';
                         echo '</div>';
                         echo '</li>';
                     } elseif (is_page() && !is_front_page()) {
@@ -36,9 +39,9 @@
                             $ancestors = array_reverse($ancestors);
                             foreach ($ancestors as $ancestor) {
                                 echo '<li>';
-                                echo '<div class="flex items-center">';
-                                echo '<svg class="w-3 h-3 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>';
-                                echo '<a href="' . esc_url(get_permalink($ancestor)) . '" class="text-gray-600 hover:text-primary">' . get_the_title($ancestor) . '</a>';
+                                echo '<div class="flex items-center space-x-1.5">';
+                                echo '<svg class="w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>';
+                                echo '<a href="' . esc_url(get_permalink($ancestor)) . '" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary">' . get_the_title($ancestor) . '</a>';
                                 echo '</div>';
                                 echo '</li>';
                             }
@@ -47,9 +50,11 @@
                     ?>
 
                     <li aria-current="page">
-                        <div class="flex items-center">
-                            <svg class="w-3 h-3 mx-1 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-primary">
+                        <div class="flex items-center space-x-1.5">
+                            <svg class="mt-1 w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                            </svg>
+                            <span class="inline-flex items-center text-sm font-medium text-primary">
                                 <?php
                                 if (is_single()) {
                                     the_title();
@@ -90,19 +95,7 @@
         <!-- Sticky Sidebar -->
         <div class="lg:w-1/4">
             <div id="sticky-sidebar" class="space-y-6">
-                <!-- Newsletter Card
-                <div class="bg-white p-4 rounded-xl shadow-md">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">FLOWBITE NEWS MORNING HEADLINES</h3>
-                    <p class="text-sm text-gray-600 mb-3">Get all the stories you need-to-know from the most powerful name in news delivered first thing every morning to your inbox</p>
-                    <form class="space-y-3">
-                        <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary focus:border-primary block w-full p-2 text-sm" placeholder="name@company.com" required>
-                        </div>
-                        <button type="submit" class="w-full text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium rounded-lg text-sm px-4 py-2 text-center">Subscribe</button>
-                    </form>
-                </div> -->
-
+                <!-- Social Links Card -->
                 <div class="bg-white p-4 rounded-xl shadow-md">
                     <h3 class="text-lg font-bold text-gray-900 mb-3">IKUTI KAMI</h3>
                     <p class="text-sm text-gray-600 mb-3">Ikuti kami di platform media sosial untuk informasi terkini.</p>
