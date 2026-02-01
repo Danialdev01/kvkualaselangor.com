@@ -1,6 +1,6 @@
 <br>
 
-<footer class="p-4 sm:p-6" style="background-color: #203864;">
+<footer class="p-4 sm:p-6" style="background-color: #2b266d;">
     <div class="mx-auto max-w-screen-xl">
         <div class="md:flex md:justify-between">
             <center>

@@ -269,7 +269,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 md:py-20 px-4md:px-6" style="color: #203864;" id="cta">
+    <section class="py-12 md:py-20 px-4md:px-6" style="color: #2b266d;" id="cta">
         <div class="container mx-auto max-w-4xl text-center">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 px-2">Bersedia untuk Memulakan Perjalanan Vokasional Anda?</h2>
             <p class="text-base md:text-lg lg:text-xl mb-8 md:mb-12 max-w-3xl mx-auto px-2 leading-relaxed">

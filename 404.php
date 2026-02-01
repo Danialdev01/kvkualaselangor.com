@@ -3,7 +3,7 @@
 <main class="pt-10">
 
     <center>
-        <div style="color: #203864;" class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div style="color: #2b266d;" class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center">
                 <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">404</h1>
                 <p class="mb-4 text-3xl tracking-tight font-bold md:text-4xl ">Halaman Tidak Ditemui</p>
